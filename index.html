@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pulsar y mostrar mensaje con cambio de color y fondo de imagen</title>
+    <style>
+        body {
+            background-image: url('FOfRm_dXIAADGHb.jpg');
+            background-size: 30%; 
+            background-position: center; 
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            animation: cambiaColor 1s infinite;
+        }
+
+        @keyframes cambiaColor {
+            0% {
+                color: red;
+            }
+            50% {
+                color: blue;
+            }
+            100% {
+                color: green;
+            }
+        }
+    </style>
+    <script>
+        function mostrarMensaje() {
+            var mensajeDiv = document.getElementById('mensaje');
+            mensajeDiv.style.display = 'block';
+            mensajeDiv.innerHTML = '¡Te quiero!';
+        }
+    </script>
+</head>
+<body>
+    <h1>¡Pulsa el botón!</h1>
+    <button onclick="mostrarMensaje()">Pulsar</button>
+    <div id="mensaje"></div>
+</body>
+</html>
